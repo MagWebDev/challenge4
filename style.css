@@ -14,13 +14,15 @@ body {
 
 .table {
     height:100vh;
-    width: 100%;
+    width: 800px;
+   max-width: 100%;
+   margin:0 auto;
     display: grid;
     
-    grid-template-columns: 1fr,1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 200px 250px;
     grid-template-areas: 
-    "s s  "
+    "s s"
     "f t";
     align-content: center;
     justify-content: center;
@@ -52,6 +54,7 @@ line-height: 1.6em;
     background-color:hsl(179, 62%, 43%);
    color: #fff;
     padding-left: 30px;
+    align-items: center;
 }
 
 .fee h4 {
@@ -96,6 +99,7 @@ background-color:hsl(179, 49%, 53%);
 @media screen and (max-width:576px) {
 .table {
     height: 100vh;
+    width: auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
