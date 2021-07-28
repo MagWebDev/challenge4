@@ -14,15 +14,17 @@ body {
 
 .table {
     height:100vh;
+    width: 100%;
     display: grid;
     
-    grid-template-columns: repeat(4,150px);
+    grid-template-columns: 1fr,1fr;
     grid-template-rows: 200px 250px;
     grid-template-areas: 
-    "s s s s "
-    "f f t t";
-    justify-content: center;
+    "s s  "
+    "f t";
     align-content: center;
+    justify-content: center;
+    
     
     
 }
@@ -92,25 +94,17 @@ background-color:hsl(179, 49%, 53%);
 }
 
 @media screen and (max-width:576px) {
-    .table {
-        height:100vh;
-        width: 350px;
-        margin: auto auto;
-        display: flex;
-       flex-direction: column;
-       justify-content: center;
-    }
-
+.table {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "s"
+    "f"
+    "t";
+}
     .start {
-        height: 250px;
-        
+        padding-bottom: 20px;
     }
-   
-    .fee {
-        height: 250px;
-    }
-    .text {
-        height: 250px;
-    }
-   
 }
